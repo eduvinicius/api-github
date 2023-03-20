@@ -15,7 +15,6 @@ export default createGlobalStyle`
   body {
     background: ${(props) => props.theme.colors.background};
     -webkit-font-smoothing: antialiased !important;
-    padding: 1rem;
   }
 
   a {
@@ -41,5 +40,21 @@ export default createGlobalStyle`
 
   ::placeholder {
     color: ${(props) => props.theme.colors.champagne};
+  }
+
+  ::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${(props) =>
+      props.theme.colors.container};        /* color of the tracking area */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) =>
+      props.theme.colors.container};    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid;  /* creates padding around scroll thumb */
   }
 `;
